@@ -12,7 +12,6 @@ export function pageLoad() {
 
     for (let i = 0; i < menu.length; i++) {
         let li = document.createElement("li");
-        console.log(menu[i]);
         li.textContent = menu[i].toUpperCase();
         li.style["list-style-type"] = "none";
         list.style["font-weight"] = "bold";
