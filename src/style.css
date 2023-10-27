@@ -71,3 +71,15 @@ input {
 li {
     font-size: 2rem;
 }
+
+.homepage {
+    gap: 25px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    border: 5px solid black;
+}
