@@ -1,8 +1,10 @@
 import { pageLoad as home } from './home.js';
 import { pageLoad as menu } from './menu.js';
 import { pageLoad as contact } from './contact.js';
+import './style.css';
 
-// create buttons for tabs, to switch between content
+// create tabs, to switch between content
+const tabs = document.createElement("div");
 const homeBtn = document.createElement("button");
 const menuBtn = document.createElement("button");
 const contactBtn = document.createElement("button");
@@ -16,9 +18,11 @@ homeBtn.textContent = "Home";
 menuBtn.textContent = "Menu";
 contactBtn.textContent = "Contact";
 
-content.appendChild(homeBtn);
-content.appendChild(menuBtn);
-content.appendChild(contactBtn);
+tabs.appendChild(homeBtn);
+tabs.appendChild(menuBtn);
+tabs.appendChild(contactBtn);
+tabs.classList.add("tabs");
+content.appendChild(tabs)
 
 // when page first loads, call home()
 home();
@@ -47,7 +51,5 @@ function clear() {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
-    content.appendChild(homeBtn);
-    content.appendChild(menuBtn);
-    content.appendChild(contactBtn);
+    content.appendChild(tabs);
 }
